@@ -61,7 +61,7 @@
             font-weight: 400;
         }
 
-        /* --- SCREENSHOT AREA (Chỗ để ảnh giao diện) --- */
+        /* --- SCREENSHOT AREA (Đã cập nhật CSS cho tính năng thông minh) --- */
         .preview-container {
             width: 100%;
             max-width: 900px;
@@ -72,12 +72,18 @@
             box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
             background: #1e293b;
             position: relative;
+            
+            /* Thêm mới để căn giữa placeholder */
+            min-height: 200px; 
+            display: flex;     
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Khi chưa có ảnh thì hiện khung này */
         .placeholder-image {
+            width: 100%; /* Thêm width full */
             aspect-ratio: 16/9;
-            display: flex;
+            display: flex; /* Mặc định flex, JS sẽ ẩn đi nếu có ảnh */
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -91,7 +97,6 @@
             color: var(--secondary-text);
         }
 
-        /* Khi CÓ ảnh thật thì dùng class này */
         .app-screenshot {
             width: 100%;
             display: block;
@@ -180,7 +185,7 @@
             opacity: 0.8;
         }
 
-        /* Style cho nút KHI NÀO tải được (dùng sau này) */
+        /* Style cho nút KHI NÀO tải được */
         .btn-active {
             background: var(--accent-color);
             color: #000;
@@ -227,10 +232,14 @@
     </div>
 
     <div class="preview-container">
-        <div class="placeholder-image">
+        
+        <img src="screenshot.png" alt="Giao diện phần mềm" class="app-screenshot" id="real-image" onerror="showFallback()">
+        
+        <div class="placeholder-image" id="fallback-box" style="display: none;">
             <i class="fa-solid fa-image" style="font-size: 40px; margin-bottom: 15px; opacity: 0.5;"></i>
             <span>Giao diện phần mềm sẽ được cập nhật sớm</span>
         </div>
+
     </div>
 
     <div class="features-section">
@@ -267,8 +276,17 @@
 
     <div class="footer-nav">
         <a href="https://songmaucodai.online"><i class="fa-solid fa-arrow-left"></i> Về trang chủ</a>
-        <a href="https://github.com/songmaucodai" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://github.com/songmaucodai/SMCD-AntiDetect-Browser" target="_blank"><i class="fa-brands fa-github"></i> GitHub Project</a>
     </div>
+
+    <script>
+        function showFallback() {
+            // Ẩn ảnh thật đi (vì nó bị lỗi/không có)
+            document.getElementById('real-image').style.display = 'none';
+            // Hiện ảnh chờ (placeholder) lên
+            document.getElementById('fallback-box').style.display = 'flex';
+        }
+    </script>
 
 </body>
 </html>
