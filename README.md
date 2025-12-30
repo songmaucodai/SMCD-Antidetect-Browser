@@ -12,7 +12,7 @@
 
   <br>
 
-  [Xem Trang Giới Thiệu Chi Tiết](https://songmaucodai.github.io/SMCD-AntiDetect-Browser/)
+  [Xem Trang Giới Thiệu Chi Tiết](https://songmaucodai.github.io/smcd-antidetect-browser/)
 
 </div>
 
@@ -20,7 +20,7 @@
 
 ## Giới thiệu
 
-**SMCD AntiDetect** là giải pháp trình duyệt ẩn danh được phát triển cho nhu cầu cá nhân. Công cụ giúp bạn quản lý nhiều tài khoản trên cùng một thiết bị Windows mà không lo bị phát hiện hoặc trùng lặp dấu vân tay trình duyệt (browser fingerprint).
+**SMCD AntiDetect Browser** là giải pháp trình duyệt ẩn danh được phát triển cho nhu cầu cá nhân. Công cụ giúp bạn quản lý nhiều tài khoản trên cùng một thiết bị Windows mà không lo bị phát hiện hoặc trùng lặp dấu vân tay trình duyệt (browser fingerprint).
 
 ### Điểm nổi bật
 
